@@ -1,0 +1,10 @@
+create or replace function abc ( c1 varchar2)
+is
+begin
+
+   insert into tab1 (col1) values ( c1);
+   return (sql%rowcount);
+exception
+  when others then
+   dbms_output.put_line(dbms_utility.format_error_backtrace);
+end;
