@@ -4,6 +4,7 @@ begin
 
    insert into tab1 (col1) values ( c1);
    return (sql%rowcount);
+   dbms_output.put_line('done');
 exception
   when others then
    dbms_output.put_line(dbms_utility.format_error_backtrace);
